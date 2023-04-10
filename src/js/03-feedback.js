@@ -24,6 +24,11 @@ if (savedFormState) {
 form.addEventListener('submit', event => {
   event.preventDefault();
 
+  if (!emailInput.value || !messageInput.value) {
+    alert('Please fill in all fields before submitting!');
+    return;
+  }
+
   const formState = {
     email: emailInput.value,
     message: messageInput.value,

@@ -12,9 +12,7 @@ vimeoPlayer.on('timeupdate', throttle(function(data) {
 const currentTime = localStorage.getItem('videoplayer-current-time');
 if (currentTime) {
   vimeoPlayer.setCurrentTime(currentTime);
-}
+};
 
-vimeoPlayer.on('play', function() {
-  console.log('played the video!');
-});
+
     
